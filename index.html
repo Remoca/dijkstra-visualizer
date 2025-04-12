@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dijkstra Visualizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Dijkstra Algorithm Visualizer</h1>
+  </header>
+
+  <main style="display: flex; gap: 2rem;">
+    <div style="display: flex; flex-direction: column;">
+      <div style="display: flex; justify-content: space-between; width: 100%; align-items: center;" class="controls">
+        <!-- 左侧按钮组 -->
+        <div>
+          <button id="startBtn">Start</button>
+          <button id="stepBtn">Next</button>
+          <button id="autoBtn">Auto</button>
+          <button id="resetBtn">Reset</button>
+        </div>
+      
+        
+        <div>
+          <button id="importBtn" style="display: none;">Import</button>
+          <input type="file" id="fileInput" accept=".json" style="display: none;" />
+          <button id="saveBtn" style="display: none;">Save</button>
+          <button id="demoBtn">Demo</button>
+          <button id="newBtn">New</button>
+        </div>
+      </div>
+      <div class="canvas-wrapper">
+        <canvas id="graphCanvas" width="800" height="600"></canvas>
+      </div>
+    </div>
+
+    <div style="
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 320px;
+      min-width: 320px;
+      max-width: 320px;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    ">
+      <div id="infoPanel" style="
+        font-family: 'Segoe UI', sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+        text-align: left;
+      ">
+        <p id="statusText" style="margin-top: 0;">Please select a start node</p>
+        <div id="debugInfo"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Mini Project: Graph Theory | Dijkstra Visualization</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
